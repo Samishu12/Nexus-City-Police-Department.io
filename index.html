@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>NCPD MDT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login">
+
+    <div class="loginBox">
+
+        <h2>Nexus City</h2>
+        <h1>Police Department</h1>
+
+        <input id="user" placeholder="Utilisateur">
+
+        <input
+            id="pass"
+            type="password"
+            placeholder="Mot de passe">
+
+        <button onclick="login()">
+            Connexion
+        </button>
+
+    </div>
+
+</div>
+
+<div id="app" style="display:none;">
+  <aside class="sidebar">
+    <h1>Nexus City</h1>
+    <h2>Police Department</h2>
+    <input id="search" placeholder="Rechercher un citoyen">
+    <button onclick="searchCitizen()">Recherche</button>
+    <button onclick="loadPlaintes()">Plaintes</button>
+    <button onclick="loadMembers()">Membres</button>
+    <button onclick="newCitizen()">Nouveau citoyen</button>
+  </aside>
+
+  <main id="content">
+    <h1>Bienvenue</h1>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

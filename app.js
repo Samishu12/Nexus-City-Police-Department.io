@@ -36,16 +36,25 @@ async function login() {
 
     if (data.success) {
 
-        document.getElementById("login")
-            .style.display = "none";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("app").style.display = "block";
 
-        document.getElementById("app")
-            .style.display = "block";
+        document.getElementById("userName").innerText =
+            username;
 
-    } else {
+        let grade = "Officier";
 
-        alert("Identifiants incorrects.");
+        if(data.grade == 2)
+            grade = "Sergent";
 
+        if(data.grade == 3)
+            grade = "Chef";
+
+        if(data.grade == 4)
+            grade ="Administrateur";
+
+        document.getElementById("userGrade").innerText =
+            grade;
     }
 }
 
@@ -137,7 +146,7 @@ async function searchCitizen() {
 
             <h2>Casier judiciaire</h2>
 
-            <table>
+            <table class="casierTable">
 
                 <tr>
                     <th>Date</th>
@@ -154,7 +163,15 @@ async function searchCitizen() {
         </div>
     `;
 }
+function logout(){
 
+    document.getElementById("app").style.display = "none";
+
+    document.getElementById("login").style.display = "flex";
+
+    document.getElementById("user").value = "";
+    document.getElementById("pass").value = "";
+}
 /* ==========================
    NOUVEAU CITOYEN
 ========================== */

@@ -1,51 +1,52 @@
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    min-height:100vh;
-    background:linear-gradient(
-        180deg,
-        #0f3b7a 0%,
-        #08111f 50%,
-        #000000 100%
-    );
+    background:#111827;
     color:white;
+    font-family:Arial;
+    margin:0;
 }
 
+/* LOGIN */
+
 #login{
-    height:100vh;
+    position:fixed;
+    inset:0;
     display:flex;
     justify-content:center;
     align-items:center;
+    background:#111827;
+    z-index:1000;
 }
 
 .loginBox{
     width:400px;
     max-width:90%;
     padding:40px;
-    background:rgba(20,20,25,0.9);
-    border:1px solid #2d3748;
+    background:#1f2937;
     border-radius:20px;
     box-shadow:0 0 30px rgba(0,0,0,0.5);
     text-align:center;
 }
 
 .loginBox h1{
+    margin-top:0;
     margin-bottom:30px;
+    font-size:32px;
 }
 
 .loginBox input{
     width:100%;
     box-sizing:border-box;
+    margin-top:10px;
     padding:14px;
-    margin-bottom:15px;
     border:none;
     border-radius:10px;
-    background:#1f2937;
+    background:#111827;
     color:white;
 }
 
 .loginBox button{
     width:100%;
+    margin-top:15px;
     padding:14px;
     border:none;
     border-radius:10px;
@@ -59,25 +60,22 @@ body{
     background:#3b82f6;
 }
 
+/* MDT */
+
 .sidebar{
-    width:250px;
-    background:#111827;
-    padding:20px;
-}
-
-.sidebar button,
-.sidebar input{
-    width:100%;
-    margin-bottom:10px;
-}
-
-#app{
-    display:flex;
+    width:260px;
     height:100vh;
+    background:#1f2937;
+    padding:20px;
+    padding-bottom:100px;
+    box-sizing:border-box;
+    position:fixed;
+    top:0;
+    left:0;
 }
 
 #content{
-    flex:1;
+    margin-left:300px;
     padding:30px;
 }
 
@@ -88,10 +86,72 @@ body{
     margin-bottom:20px;
 }
 
+input,
+textarea,
+button{
+    width:100%;
+    box-sizing:border-box;
+    margin-top:10px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3b82f6;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td,
+th{
+    padding:10px;
+    border-bottom:1px solid #374151;
+}
+
 .photoCitizen{
-    width:150px;
-    height:200px;
+    width:300px;
+    height:300px;
     object-fit:cover;
     border-radius:10px;
+    border:2px solid #374151;
     margin-bottom:20px;
+    display:block;
+}
+.userPanel{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+}
+
+#userName{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:2px;
+}
+
+#userGrade{
+    color:#8fa4c7;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+.userPanel button{
+    width:100%;
+    margin-top:0;
+}
+.casierTable th,
+.casierTable td{
+    text-align:left;
+    padding:14px;
 }
